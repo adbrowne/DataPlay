@@ -1,9 +1,66 @@
 @(message: String = "nothing")
 
 @main("Welcome to Play 2.0 beta") {
-    
-  @play20.welcome(message)
 
-  <div id="dropbox"><span id="droplabel">Drop file here...</span></div>
-  <div id="preview">Preview will display here</div>
+@play20.welcome(message)
+
+<style type="text/css">
+  .black {
+    background-color: Black;
+  }
+
+  html {
+    height: 100%;
+  }
+
+  body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+  }
+
+  #map_canvas {
+    height: 100%;
+  }
+
+  #feedback {
+    font-size: 1.4em;
+  }
+
+  #canvas {
+    height: 800px;
+    left: 50%;
+    margin: -150px 0 0 -200px;
+    position: absolute;
+    top: 50%;
+    width: 1000px;
+  }
+
+  #paper {
+    height:800px;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 1000px;
+  }
+
+  #selected{
+    max-width:200px;
+  }
+  .selectbox-helper {
+    border: 1px dotted black;
+    position: absolute;
+    z-index: 100;
+  }
+</style>
+<h1>Map#index</h1>
+<p>Find me in app/views/map/index.html.erb</p>
+<div class="demo" id="canvas">
+  <div id="paper"></div>
+</div>
+<div class="selected" id="selected">
+
+</div>
+<div id="dropbox"><span id="droplabel">Drop file here...</span></div>
+<div id="preview">Preview will display here</div>
 }
